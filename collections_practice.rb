@@ -55,11 +55,13 @@ def merge_data(keys, data)
     name = name_hash[:first_name]
 
     data.map do |data_hash|
-     if data_hash[name] #?is there info for key name?
+     if data_hash[name] # does the hash have a name key < 'blake' >
 
-       merged_data = data_hash[name]
-       merged_data[:first_name] = name
-       merged_array << merged_data
+       merged_data = data_hash[name] # { :awesomeness => 10, :height =>...}
+
+       merged_data[:first_name] = name # now add k/v pair < :first_name => 'blake' >
+
+       merged_array << merged_data # merge above hash into array
 
      end
    end
@@ -80,13 +82,14 @@ def organize_schools(schools)
 
   organized_schools = {}
 
-  schools.each do |name, location_hash|
+  schools.each do |name, location_hash| # "flatiron school bk" => { :location => "NYC" }
 
-    city = location_hash[:location]
-    if organized_schools[city]
-      organized_schools[city] << name
-    else organized_schools[city] = []
-      organized_schools[city] << name
+    city = location_hash[:location] # var city = string city name
+
+    if organized_schools[city] # if {"NYC", "SF"... }
+      organized_schools[city] << name # just add city array values= "NYC"=>["flatiron school bk",..]
+
+    else organized_schools[city] = [] << name  #else create var/array pair {"NYC"=>["flatiron school bk"..],.. b }
 
     end
   end

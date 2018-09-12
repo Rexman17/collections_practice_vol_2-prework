@@ -1,4 +1,6 @@
 # your code goes here
+require 'pry'
+
 def begins_with_r(array)
 
   array.all? { |word| word.start_with?('r') }
@@ -73,6 +75,17 @@ def find_cool(array)
 end
 
 
+
+
+
 def organize_schools(schools)
+
+  organized_schools = {}
+
+  schools.each do |name, location_hash|
+    location_hash[:location].each do |city|
+      binding.binding.pry
+    end
+  end
 
 end

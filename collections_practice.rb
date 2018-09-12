@@ -74,7 +74,7 @@ def find_cool(array)
 
 end
 
-:schools = {
+schools = {
   {
     "flatiron school bk" => {
       :location => "NYC"

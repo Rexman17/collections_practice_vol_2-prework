@@ -77,14 +77,13 @@ end
 
 
 
-
 def organize_schools(schools)
 
   organized_schools = {}
 
   schools.each do |name, location_hash|
     location_hash[:location].each do |city|
-      binding.binding.pry
+     binding.pry
     end
   end
 

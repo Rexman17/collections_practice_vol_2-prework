@@ -83,7 +83,7 @@ def organize_schools(schools)
 
   schools.each do |name, location_hash|
     location_hash[:location].each do |city|
-     binding.pry
+
     end
   end
 

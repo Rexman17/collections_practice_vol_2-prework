@@ -87,7 +87,8 @@ def organize_schools(schools)
     city = location_hash[:location] # var city = string city name
 
     if organized_schools[city] # if {"NYC", "SF"... }
-      organized_schools[city] << name # just add city array values= "NYC"=>["flatiron school bk",..]
+
+      organized_schools[city] << name # just add city array vals --> "NYC"=>["flatiron school bk",..]
 
     else organized_schools[city] = [] << name  #else create var/array pair {"NYC"=>["flatiron school bk"..],.. b }
 

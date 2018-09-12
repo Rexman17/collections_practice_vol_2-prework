@@ -85,7 +85,8 @@ def organize_schools(schools)
     city = location_hash[:location]
     if organized_schools[city]
       organized_schools[city] << name
-    else organized_schools[city] = [] << name
+    else organized_schools[city] = []
+      organized_schools[city] << name
 
     end
   end
